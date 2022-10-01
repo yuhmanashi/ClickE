@@ -7,22 +7,24 @@ window.onload = function(){
             if (!(order.includes(box.id))){
                 order.push(box.id);
                 box.style.backgroundColor = 'red';
-                // checkBoxes();
+                
+                if (order.length === 11){
+                    setTimeout(clearBoxes, 500);
+                }
             } 
         }
     }
 }
 
-const checkBoxes = () => {
-    if (order.length === 11) {
-        while (order.length > 0){
-            setInterval(clearBoxes, 500)
-        }
-    }
-}
-
-const clearBoxes = () => {
+const clearBox = () => {
     const id = order.pop();
     const box = document.getElementById(`${id}`)
     box.style.backgroundColor = 'white';
+}
+
+
+const clearBoxes = () => {
+    for (let i = 0; i < order.length; i++){
+        setTimeout(clearBox, i * 500)
+    }
 }

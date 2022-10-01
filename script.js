@@ -7,7 +7,6 @@ window.onload = function(){
         box.onclick = function(){
             if (!animation){
                 if (!(order.includes(box.id))){
-                    console.log(box.id);
                     order.push(box.id);
                     box.style.backgroundColor = 'red';
                     

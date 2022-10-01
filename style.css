@@ -1,0 +1,19 @@
+.boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 800px;
+    width: 600px;
+    border: 1px solid black;
+}
+
+.boxes > * {
+    display: flex;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    margin: 5px;
+}
